@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/name', (req, res) => {
+    res.json({ message: 'hello shanthosh'});
+  });
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
-});
+})
